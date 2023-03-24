@@ -1,0 +1,18 @@
+public class Greeting {
+	public static void main(String args[]) {
+		System.out.println("Hello");
+		
+		byte a = 50;
+		short b =30;
+		int c=10000;
+		long d=20000;
+		char e='a';
+		
+		
+		float f=1.23f;
+		double g= 12345.6789;
+		
+		int result= a+b;
+		System.out.println(result);
+	}
+}

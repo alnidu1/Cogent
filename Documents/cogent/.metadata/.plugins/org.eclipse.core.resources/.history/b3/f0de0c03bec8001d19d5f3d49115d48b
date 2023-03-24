@@ -1,0 +1,56 @@
+package poly;
+
+public class overriding {
+	class Person{
+		
+		public void behavior() {
+			System.out.println("Neutral");
+		}
+		
+	}
+	
+	class Parent extends Person{
+		
+		@Override
+		public void behavior() {
+			System.out.println("REspect");
+		}
+		
+	}
+	class Child extends Person{
+		
+		@Override
+		public void behavior() {
+			System.out.println("Care");
+		}
+		
+	}
+	
+	class Friend extends Person{
+		
+		@Override
+		public void behavior() {
+			System.out.println("Fun");
+		}
+		
+	}
+	
+	class SO extends Person{
+		
+		@Override
+		public void behavior() {
+			System.out.println("Love");
+		}
+		
+	}
+	
+	
+	
+	public static void main(String args[]) {
+		
+		Person p= new Person();
+		
+		
+	}
+
+}

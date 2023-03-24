@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class evennumber {
+	Scanner sc= new Scanner(System.in);
+	System.out.println("Enter value");
+	int n=sc.nextInt();
+	
+	int i=2;
+	while(i< n) {
+		System.out.println(i);
+		i=+2;
+		
+	}
+}

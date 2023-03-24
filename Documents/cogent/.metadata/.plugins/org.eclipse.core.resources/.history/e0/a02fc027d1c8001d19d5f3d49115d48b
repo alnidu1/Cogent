@@ -1,0 +1,34 @@
+package CRUD;
+
+import java.util.Scanner;
+
+public class Main {
+	
+	public static void main(String args[]) {
+		Scanner sc= new Scanner(System.in);
+		Person person[]=null;
+		PersonDAO pdao= new PersonDAO();
+	
+	
+		int choice=0;
+	
+		do {
+			System.out.println("========MENU=========");
+			System.out.println("1.Add books\n2.Print books\n3.Update\n4.Exit\n\n Please Enter Menu Option");
+			choice=sc.nextInt();
+			
+			/*switch(choice) {
+			case 1:
+				System.out.println("How many being adding to record");
+				person= new Person[sc.nextInt()];
+				for(int i=0;i<person.length;i++) {
+					pdao.create(person, i);
+				}
+				
+			}
+		*/
+			
+			choice=4;
+		}while(choice!=4);
+	}
+}

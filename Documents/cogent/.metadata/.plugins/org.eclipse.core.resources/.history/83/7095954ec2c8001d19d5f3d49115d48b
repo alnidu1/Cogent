@@ -1,0 +1,16 @@
+package poly;
+
+
+public class Main {
+public static void main(String args[]) {
+		
+		Car c= new Car();
+		c.display();
+		
+		SportCar c1=new SportCar();
+		c1.setAirBallonType("Red");
+		c1.display();
+		
+		
+	}
+}

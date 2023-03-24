@@ -1,0 +1,44 @@
+package Book;
+
+import java.util.Scanner;
+
+
+public class BookDAO {
+	
+	Scanner sc=new Scanner(System.in);
+	public Book create() {
+		Book b= new Book();
+		
+		System.out.println("Please enter book id");
+		b.setID(sc.nextInt());
+		System.out.println("Please enter book name");
+		b.setName(sc.next());
+		System.out.println("Please enter price");
+		b.setPrice(sc.nextInt());
+		
+		
+		return b;
+		
+	}
+	
+	public void read(Book books[] ) {
+		System.out.println("\n");
+		for(Book book:books) {
+			System.out.println("BookID:" + book.getID()+ 
+					" Book Name:" + book.getName()+ " Book Price:" + book.getPrice());
+		}
+		System.out.println("\n");
+
+		
+		
+	}
+	
+	public void update() {
+		
+	}
+	
+	public void delete() {
+		
+	}
+
+}

@@ -1,0 +1,18 @@
+import java.util.ArrayList;
+
+public class array_bingo {
+	public static void main(String[] args) {
+		if(args.length==2) {
+			int num1=Integer.parseInt(args[0]);
+			int num2=Integer.parseInt(args[1]);
+			
+			int bingo[]=new int[5];
+			
+			
+		}
+		
+		else {
+			System.out.println("Invalid args" );
+		}
+	}
+}

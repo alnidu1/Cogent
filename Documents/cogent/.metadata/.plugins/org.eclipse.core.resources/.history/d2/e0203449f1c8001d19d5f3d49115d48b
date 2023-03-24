@@ -1,0 +1,12 @@
+package poly;
+
+public abstract class Compartment {
+	abstract void notice();
+}
+ 
+public class FirstClass extends Compartment{
+	@Override
+	void notice() {
+		
+	}
+}

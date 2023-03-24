@@ -1,0 +1,35 @@
+package poly;
+
+class Car {
+	int noOfGear;
+	int initial_speed;
+	
+	void drive(int speed, int gear) {
+		this.initial_speed=speed;
+		this.noOfGear=gear;
+	}
+	
+	void display() {
+		System.out.println("Car starting speed is " + initial_speed + "and gear is" + noOfGear+".");
+	};
+}
+
+class SportCar extends Car{
+	
+	String AirBallonType;
+	
+	public String getAirBallonType() {
+		return AirBallonType;
+	}
+
+	public void setAirBallonType(String airBallonType) {
+		AirBallonType = airBallonType;
+	}
+
+	@Override
+	void display() {
+		System.out.println("SportCar starting speed: " + initial_speed + "\n Gear:" + noOfGear+"AirballonType " +AirBallonType);
+	}
+}
+
+

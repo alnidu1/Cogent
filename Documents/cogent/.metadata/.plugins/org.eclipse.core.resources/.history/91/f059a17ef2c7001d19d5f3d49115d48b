@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class string {
+	public static void main(String[] args) {
+		
+				String n=args[0];
+				int l= n.length();
+				String s= n.substring(0,1).toUpperCase() + n.substring(1);
+				String r= "";
+				for(int j=l-1; j>= 0;j--) {
+					r= r+n.charAt(j);
+				}
+				boolean a= false;
+				//System.out.println(r+" "+n);
+
+				if(r.equals(n)) {
+					a=true;
+					
+				}
+				
+				System.out.println("Length:"+l+" Uppercase: " + s+ " Palindrome: " + a);
+			}
+			
+		
+		
+		
+		
+	}
+

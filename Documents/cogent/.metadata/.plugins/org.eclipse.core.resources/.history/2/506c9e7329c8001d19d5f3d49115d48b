@@ -1,0 +1,12 @@
+package inheritance;
+
+public class Publication {
+	private double price;
+	private double quantity;
+	
+	double sell() {
+		
+		return price * quantity;
+	}
+		
+}
