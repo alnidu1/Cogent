@@ -1,0 +1,149 @@
+package ex;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class main {
+	
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+
+		/*
+		CalcAverage avg=new CalcAverage();
+		System.out.println("CalAvg: "+avg.avgFirst(10));
+		
+		int c=0;
+		int loop=0;
+		int first=0;
+		int second=0;
+		do {
+			do {
+				System.out.println("Enter option:\n1.add\n2.sub\n3.multiply\n4.division\n");
+				c=sc.nextInt();
+				
+			
+				System.out.println("Enter firest number");
+				try {
+					first=sc.nextInt();
+				}
+				catch(Exception e){
+					System.out.println("Enter whole number only");
+					continue;
+				}
+				System.out.println("Enter fsecond number");
+				try {
+					second=sc.nextInt();
+				}
+				catch(Exception e){
+					System.out.println("Enter whole number only");
+					continue;
+				}
+				
+				loop=1;
+			
+			}while(loop!=1);
+			
+			Number n= new Number(first,second);
+			switch(c) {
+			case 1:
+				n.add();
+				break;
+			case 2:
+				n.sub();
+				break;
+			case 3:
+				n.mul();
+				break;
+			case 4:
+				n.div();
+				break;
+			case 5:
+				break;
+			default:
+				System.out.println("Didnt enter valid choice");
+			}
+		
+		}while(c!=5);
+		*/
+		
+	/*
+		int c=0;
+		BankAccount ba=new BankAccount();
+		System.out.println("Enter account number");
+		ba.accNo=sc.nextInt();
+		System.out.println("Name");
+		ba.custName=sc.next();
+		System.out.println("Balance");
+		ba.balance=sc.nextFloat();
+		
+		do {
+			float d=0;
+			
+			System.out.println("Enter option:\n1.deposit\n2.withdraw\n3.balace\n4.exist\n");
+			try {
+				c=sc.nextInt();
+			}
+			catch(InputMismatchException e) {
+				System.out.println("Type need to be ints");
+				break;
+				
+			}
+			switch(c) {
+			case 1:
+				System.out.println("deposit amount:");
+				d=sc.nextFloat();
+				try {
+					ba.deposit(d);
+				} catch (Myexception e) {
+					// TODO Auto-generated catch block
+					System.out.println(e);
+				}
+				break;
+			case 2:
+				System.out.println("withdraw amount:");
+				d=sc.nextFloat();
+
+				try {
+					ba.withdraw(d);
+				} catch (Myexception e) {
+					// TODO Auto-generated catch block
+					System.out.println(e);
+				}
+				break;
+			case 3:
+				
+
+				float bal=ba.getBalance();
+				System.out.println("Balance: " + bal);
+				break;
+			case 4:
+				break;
+			
+			default:
+				System.out.println("Didnt enter valid choice");
+			}
+		
+		}while(c!=4);
+		*/
+		String name;
+		String d;
+		double basic;
+		int id;
+		System.out.println("Enter name");
+		name=sc.next();
+		System.out.println("Enter id");
+		id=sc.nextInt();
+		System.out.println("Enter Designation");
+		d=sc.next();
+		System.out.println("Enter basic");
+		basic=sc.nextDouble();
+		
+		try {
+			Emp e=  new Emp(name, id, d, basic);
+			e.printDEFT();
+		} catch (LowSalException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

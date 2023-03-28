@@ -1,0 +1,65 @@
+package ex;
+
+
+
+public class BankAccount {
+	int accNo;
+	String custName;
+	String accType;
+	float balance;
+	
+	
+	
+	
+
+	void deposit(float amt) throws Myexception {
+		if(amt <=0) {
+			throw new Myexception("Amount cannot be negative");
+			//System.out.println("Amount cannot be negative");
+		}
+		else {
+			System.out.println("Prev balance:"+ this.balance);
+
+			this.balance= this.balance+ amt;
+		
+			System.out.println("depositing:" + amt);
+			System.out.println("Current balance:" + this.balance);
+		}
+		
+	}
+	
+	void withdraw(float amt) throws Myexception {
+		
+		if(amt> this.balance) {
+			throw new Myexception("Withdrawing too much");
+			//System.out.println("Withdrawing too much");
+
+		}
+		else {
+		
+			if(amt>5000 || amt < 1000) {
+				throw new Myexception("Withdrawing too much");
+				//System.out.println("Amount need to be between 5000 to 1000");
+
+
+				
+			}
+			else {
+				System.out.println("Prev balance:"+ this.balance);
+		
+				this.balance= this.balance- amt;
+		
+				System.out.println("depositing:" + amt);
+				System.out.println("Current balance:" + this.balance);
+			}
+		}
+
+	}
+
+	public float getBalance() {
+		return balance;
+	}
+
+	
+	
+}

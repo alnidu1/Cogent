@@ -21,7 +21,12 @@ public class string {
 				
 				System.out.println("Length:"+l+" Uppercase: " + s+ " Palindrome: " + a+"\n");
 			}
+			
+			
 		}
+		
+
+		
 	}
 			
 		

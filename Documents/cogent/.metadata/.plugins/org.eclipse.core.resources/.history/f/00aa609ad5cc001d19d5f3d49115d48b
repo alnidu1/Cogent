@@ -1,0 +1,47 @@
+package ex;
+
+public class BankAccount {
+	int accNo;
+	String custName;
+	String accType;
+	float balance;
+	
+	
+	
+	public void WithdrawEx() {
+		System.out.println("Must withdraw greater 1000 and less then 5000 and can be lower than current balance");
+	}
+
+	void deposit(float amt) throws Myexception{
+		if(amt <0) {
+		}
+		else {
+			System.out.println("Prev balance:"+ this.balance);
+
+			this.balance= this.balance+ amt;
+		
+			System.out.println("depositing:" + amt);
+			System.out.println("Current balance:" + this.balance);
+		}
+		
+	}
+	
+	void withdraw(float amt) {
+		
+		System.out.println("Prev balance:"+ this.balance);
+
+		this.balance= this.balance- amt;
+		
+		System.out.println("depositing:" + amt);
+		System.out.println("Current balance:" + this.balance);
+
+
+	}
+
+	public float getBalance() {
+		return balance;
+	}
+
+	
+	
+}

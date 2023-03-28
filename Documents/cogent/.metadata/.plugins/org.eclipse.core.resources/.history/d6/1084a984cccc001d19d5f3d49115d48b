@@ -1,0 +1,11 @@
+package ex;
+
+public class isNatural extends Exception {
+	
+	public isNatural(int i) {
+		super();
+	}
+	
+	
+
+}

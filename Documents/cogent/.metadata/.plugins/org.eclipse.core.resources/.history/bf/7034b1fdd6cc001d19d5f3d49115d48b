@@ -1,0 +1,11 @@
+package ex;
+
+public class Myexception extends Exception{
+	
+	public void Myexception(String s) {
+	
+		System.out.println("New exception");
+	
+	}
+
+}

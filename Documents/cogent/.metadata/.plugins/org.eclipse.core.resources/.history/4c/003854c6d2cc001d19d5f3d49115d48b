@@ -1,0 +1,9 @@
+package ex;
+
+public class Myexception extends Exception{
+	
+	public void Negative(String message) {
+		super(message);
+	}
+
+}

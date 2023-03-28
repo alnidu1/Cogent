@@ -1,0 +1,14 @@
+package ex;
+
+public class Myexception extends Exception{
+	
+	public void Negative() {
+	
+		System.out.println("Value cannot be negatice");
+	}
+	
+	public void WithdrawEx() {
+		System.out.println("Must withdraw greater 1000 and less then 5000 and can be lower than current balance");
+	}
+
+}

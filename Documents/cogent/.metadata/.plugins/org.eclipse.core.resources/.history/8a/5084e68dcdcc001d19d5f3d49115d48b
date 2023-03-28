@@ -1,0 +1,9 @@
+package ex;
+
+public class main {
+	
+	public static void main(String[] args) {
+		CalcAverage avg=new CalcAverage();
+		System.out.println(avg.avgFirst(10));
+	}
+}

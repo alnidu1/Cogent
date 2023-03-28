@@ -1,0 +1,40 @@
+package ex;
+
+public class Emp {
+	int empId;
+	String empName;
+	String designation ;
+	double basic;
+	double hra=0;
+	
+	void printDEFT(){
+		System.out.println("Name: " + this.empName);
+		System.out.println("ID: " + this.empId);
+		System.out.println("Destination: " + this.designation);
+		System.out.println("Basic: " + this.basic);
+		System.out.println("hra: " + this.hra);
+
+
+
+		
+	}
+	
+	void calculateHRA() {
+		if(this.designation.equals("Manager")) {
+			this.hra=.10*this.basic;
+		}
+		else if(this.designation.equals("Officer")) {
+			this.hra=.12* this.basic;
+		}
+		
+		else if(this.designation.equals("Clerk")) {
+			this.hra=.5* this.basic;
+		}
+	}
+	 Emp(int id, String d, double basic){
+		 this.empId=id;
+		 this.designation=d;
+		 this.basic=basic;
+	 }
+	
+}

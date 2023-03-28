@@ -1,0 +1,23 @@
+package ex;
+
+public class main {
+	
+	public static void main(String[] args) {
+		CalcAverage avg=new CalcAverage();
+		System.out.println("CalAvg: "+avg.avgFirst(10));
+		
+		Number n= new Number(12,0);
+		
+		n.add();
+		System.out.println("add:" + n.result);
+		n.sub();
+		System.out.println("sub:" + n.result);
+		n.mul();
+		System.out.println("mul:" + n.result);
+		n.div();
+		System.out.println("div:" + n.result);
+
+		
+		
+	}
+}

@@ -1,0 +1,51 @@
+package ex;
+
+public class Number {
+	int first;
+	int second;
+	double result;
+	
+	public Number(int first, int second) {
+		super();
+		this.first = first;
+		this.second = second;
+	}
+	
+	void add() {
+		int a=this.first;
+		int b=this.second;
+		
+		this.result=a+b;
+		
+	}
+	
+	void sub() {
+		int a=this.first;
+		int b=this.second;
+		
+		this.result=a-b;
+		
+	}
+	
+	void mul() {
+		int a=this.first;
+		int b=this.second;
+		
+		this.result=a*b;
+		
+	}
+	
+	void div() {
+		int a=this.first;
+		int b=this.second;
+		
+		try {
+			this.result=a/b;
+		}
+		catch(ArithmeticException e) {
+			System.out.println("Second number cannot be 0");
+		}
+		
+	}
+
+}
