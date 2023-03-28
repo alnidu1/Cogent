@@ -1,0 +1,34 @@
+package CharacterStream;
+
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class ReaderWriterDemo {
+	public static void main(String[] args) {
+		
+		FileReader fr=null;
+		FileWriter fw=null;
+		
+		File f=new File("/Users/alnidu/Documents/Streamabc.txt");
+		File outfile=new File("/Users/alnidu/Documents/Stream/meg.txt");
+		
+		int ch;
+		try {
+			fr=new FileReader(f);
+
+			while((ch=fr.read())!=-1) {
+				fw.write(ch);
+				
+			}
+			System.out.println("Data copied");
+			fw.close();
+			fr.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+}

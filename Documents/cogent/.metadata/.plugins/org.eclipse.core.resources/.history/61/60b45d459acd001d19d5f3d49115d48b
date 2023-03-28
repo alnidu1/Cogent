@@ -1,0 +1,20 @@
+package MultithreadingDemo;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Main st= new Main();
+		st.printNums();
+		
+		for(int j=0; j<=200;j++) {
+			System.out.println("j:"+j+"\t");
+		}
+	}
+	
+	public void printNums() {
+		for(int i=0;i<=200;i++) {
+			System.out.println("i:"+i+"\t");
+		}
+	}
+}

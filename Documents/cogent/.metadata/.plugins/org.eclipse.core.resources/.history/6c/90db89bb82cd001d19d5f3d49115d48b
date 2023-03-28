@@ -1,0 +1,9 @@
+package SerializationAssignment;
+
+public class OClass {
+	int rnum;
+	String name;
+	int age;
+	String Address;
+
+}

@@ -1,0 +1,5 @@
+package SerializationAssignment;
+
+public class MyException {
+
+}

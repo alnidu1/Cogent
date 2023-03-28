@@ -1,0 +1,8 @@
+package Assignment;
+
+public class ThreadDemo {
+
+	public static void main() {
+		
+	}
+}
