@@ -1,0 +1,36 @@
+package Arraylist;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+public class demo {
+	
+	public static void main(String[] args) {
+		/*ArrayList<Integer> al= new ArrayList();
+		al.add(new Integer(20));
+		al.add(40);
+		al.add(50);//autoboxing
+		//al.add("Cogent");
+		//al.add("Infotech");
+		
+		for(Object i: al) {
+			System.out.println(i);
+		}
+		
+		Iterator <Integer> itr=al.iterator();
+		while(itr.hasNext()) {
+			System.out.println(itr.next());
+			itr.remove();
+		}
+		*/
+		
+		List<Integer> list= new ArrayList<Integer>();
+		
+		for(int i=10;i<100;i=i+10) {
+			list.add(i);
+		}
+		
+	}
+
+}

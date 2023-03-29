@@ -1,0 +1,22 @@
+package Assignment;
+
+import java.util.Scanner;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		Student stud= new Student();
+		
+		stud.setNames();
+		stud.printNames();
+		stud.searchName(0);
+		
+		stud.searchName("a");
+		//stud.removeName("Andy");
+		
+		//stud.printNames();
+	}
+	
+	
+
+}

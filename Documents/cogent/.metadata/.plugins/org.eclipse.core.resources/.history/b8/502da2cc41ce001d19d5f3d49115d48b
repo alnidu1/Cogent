@@ -1,0 +1,15 @@
+package Assignment2;
+
+public class Counter extends Thread{
+
+	int num;
+	Storage s= new Storage();
+	@Override
+	public void run() {
+		for(int i=0; i< 10;i++) {
+			this.num=i;
+			s.num= this.num;
+			this.wait();
+		}
+	}
+}

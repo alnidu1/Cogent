@@ -1,6 +1,0 @@
-package poly;
-
-public abstract class abstract_instrument {
-	
-	abstract void play();
-}

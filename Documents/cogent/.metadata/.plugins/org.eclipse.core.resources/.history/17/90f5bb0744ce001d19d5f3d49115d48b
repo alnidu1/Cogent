@@ -1,0 +1,22 @@
+package Assignment2;
+
+public class Counter extends Thread{
+
+	int num;
+	Storage s= new Storage();
+	@Override
+	public void run() {
+		synchronized(this) {
+			for(int i=0; i< 10;i++) {
+				this.num=i;
+				s.num= i;
+				try {
+					this.wait();
+				} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		}
+	}
+}

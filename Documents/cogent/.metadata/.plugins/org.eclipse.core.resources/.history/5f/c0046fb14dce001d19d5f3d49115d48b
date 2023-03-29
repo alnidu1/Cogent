@@ -1,0 +1,25 @@
+package Assignment2;
+
+public class Counter extends Thread{
+
+	
+	Storage s;
+	
+	public Counter(Storage s2) {
+		// TODO Auto-generated constructor stub
+		this.s= s2;
+	}
+
+	@Override
+	public void run() {
+		
+		
+		for(int i=0; i< 100;i++) {
+			s.num= i;
+			System.out.println("Storage " + s.num);
+				
+
+		}
+		
+	}
+}

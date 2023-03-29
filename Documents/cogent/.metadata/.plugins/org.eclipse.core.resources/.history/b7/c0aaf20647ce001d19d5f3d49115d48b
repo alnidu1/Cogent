@@ -1,0 +1,27 @@
+package Assignment2;
+
+public class Storage  {
+	
+	int num;
+	Counter c;
+	Printer p;
+
+	public Storage(int num) {
+		super();
+		this.num = num;
+	}
+
+	public Storage() {
+		// TODO Auto-generated constructor stub
+	}
+
+	void display() {
+		Counter c= new Counter();
+		this.c=c;
+		this.c.start();
+		Printer p=new Printer();
+		this.p=p;
+		this.p.start();
+		
+	}
+}

@@ -1,0 +1,29 @@
+package Assignment2;
+
+public class Printer extends Thread {
+
+	Storage s;
+	Counter c;
+
+	public Printer() {
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void run() {
+		for (int i = 0; i <= 100; i++) {
+			synchronized (this) {
+				//System.out.print("Printing number " + s.num);
+				notifyAll();
+				try {
+					this.wait();
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				notify();
+			
+			}
+		}
+	}
+}

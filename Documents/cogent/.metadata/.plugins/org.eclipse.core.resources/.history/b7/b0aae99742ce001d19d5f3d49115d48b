@@ -1,0 +1,25 @@
+package Assignment2;
+
+
+
+public class Main {
+
+public static void main(String[] args) {
+		
+		
+		
+		Counter c= new Counter();
+		Storage s=new Storage();
+		Printer p= new Printer();
+		c.start();
+		p.start();
+		
+		synchronized(c){
+			c.notify();
+			p.notify();
+			
+		}
+		
+		
+	}
+}

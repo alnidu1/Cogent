@@ -1,0 +1,43 @@
+package Assignment;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Student {
+
+	private ArrayList<String> names=new ArrayList<String>();
+	
+	public void setNames() {
+		Scanner sc= new Scanner(System.in);
+		
+		System.out.println("How many names?");
+		int c=sc.nextInt();
+		
+		for(int i=0; i< c;i++) {
+			System.out.println((i+1)+". Enter name:");
+			String name=sc.next();
+			this.names.add(name);
+		}
+	}
+	
+	public void searchName(String name) {
+		
+	}
+	
+	public void searchName(int i) {
+		
+	}
+	
+	public void printNames() {
+		System.out.println("Printing name");
+
+		for(String s: this.names) {
+			System.out.println(s);
+			}
+		
+	}
+	
+	public void removeName(String name) {
+		
+	}
+}

@@ -1,0 +1,20 @@
+package BasicWait;
+
+public class Main {
+	
+	public static void main(String[] args) throws InterruptedException {
+		MyThread t= new MyThread();
+		t.start();
+		
+		synchronized(t) {
+			System.out.println("Main wait");
+			t.wait();
+			System.out.println("Main notified");
+			System.out.println(t.total);
+		}
+	}
+	
+	
+	
+
+}

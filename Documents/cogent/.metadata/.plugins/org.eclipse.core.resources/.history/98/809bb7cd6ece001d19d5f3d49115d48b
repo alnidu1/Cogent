@@ -1,0 +1,26 @@
+package Assignment;
+
+import java.util.Scanner;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		Student stud= new Student();
+		Scanner sc= new Scanner(System.in);
+		
+		stud.setNames();
+		stud.printNames();
+		
+		System.out.println("Index to remove");
+		int temp=sc.nextInt();
+		stud.searchName(temp);
+		
+		stud.searchName("a");
+		stud.removeName("a");
+		
+		stud.printNames();
+	}
+	
+	
+
+}
