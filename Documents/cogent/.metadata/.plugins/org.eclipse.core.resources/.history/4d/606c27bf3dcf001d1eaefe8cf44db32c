@@ -1,0 +1,17 @@
+package student;
+
+import java.util.ArrayList;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Student st1= new Student(1,"class1", "Jon");
+		Student s2=new Student(2, "class5", "Sam");
+		ArrayList<Student> slist=new ArrayList<Student>();
+		
+		slist.add( s2);
+		slist.add( st1);
+
+		
+	}
+}

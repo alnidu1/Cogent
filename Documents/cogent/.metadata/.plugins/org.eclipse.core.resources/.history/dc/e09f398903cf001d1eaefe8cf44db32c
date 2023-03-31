@@ -1,0 +1,13 @@
+package Sorting;
+
+public class Emp implements Comparable{
+
+	int id;
+	String name;
+	public Emp(int id, String name) {
+		super();
+		this.id = id;
+		this.name = name;
+	}
+	
+}

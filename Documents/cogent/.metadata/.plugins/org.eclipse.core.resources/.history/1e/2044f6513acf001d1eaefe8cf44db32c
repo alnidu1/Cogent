@@ -1,0 +1,18 @@
+package lambdaAssignment;
+
+
+public class Main {
+
+
+	public static void main(String [] args) {
+		
+		
+		
+		
+		MyInterface mi=(s) -> (s.length());
+		int l= mi.length("asklks");
+		
+		System.out.println(l);
+		
+	}
+}

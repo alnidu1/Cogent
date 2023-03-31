@@ -1,0 +1,17 @@
+package functional;
+
+public interface MyInterface {
+
+	public void m1();
+	
+	default void m2()
+	{
+		System.out.println("This is default");
+	}
+	
+	public static void m3() {
+		System.out.println("This is m2");
+
+	}
+	
+}

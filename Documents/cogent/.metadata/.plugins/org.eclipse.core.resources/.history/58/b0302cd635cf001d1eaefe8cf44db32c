@@ -1,0 +1,7 @@
+package lambdaAssignment;
+
+public interface MyInterface {
+	
+	public int length(String s);
+
+}

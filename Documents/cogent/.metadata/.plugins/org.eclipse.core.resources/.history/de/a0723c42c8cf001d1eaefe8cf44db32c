@@ -1,0 +1,112 @@
+package employee;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+
+public class EmployeeDaoImpl implements EmployeeDao{
+	Scanner sc=new Scanner(System.in);
+
+	
+	@Override
+	public EmployeePojo create() {
+		
+		EmployeePojo emp= new EmployeePojo();
+		
+		System.out.println("Please enter Employee Number");
+		emp.setEmployeeno(sc.nextInt());
+		System.out.println("Please enter Employee name");
+		emp.setName(sc.next());
+		System.out.println("Please enter Employee address");
+		emp.setAddress(sc.next());
+		System.out.println("Please enter Employee email");
+		emp.setEmail(sc.next());
+		System.out.println("Please enterEmployee Salary");
+		emp.setSalary(sc.nextFloat());
+		
+		
+		return emp;
+		
+	}
+	@Override
+	public void read(ArrayList<EmployeePojo> EmployeePojos ) {
+		System.out.println("\n");
+		for(EmployeePojo EmployeePojo:EmployeePojos) {
+			if(EmployeePojo==null) {
+				continue;
+			}
+			System.out.println("EmployeePojoID:" + EmployeePojo.getID()+ 
+					" EmployeePojo Name:" + EmployeePojo.getName()+ " EmployeePojo Price:" + EmployeePojo.getPrice());
+		}
+		System.out.println("\n");
+
+		
+		
+	}
+	@Override
+	public void update(ArrayList<EmployeePojo> EmployeePojos) {
+		System.out.println("Enter EmployeePojoID you wish to update");
+		int uid= sc.nextInt();
+		
+		for(EmployeePojo EmployeePojo: EmployeePojos) {
+			if(uid==EmployeePojo.getID()) {
+				String oldname= EmployeePojo.getName();
+				int price= EmployeePojo.getPrice();
+				System.out.println("EmployeePojo: " + EmployeePojo.getName() + " with a price of " + EmployeePojo.getPrice());
+				System.out.println("Please new EmployeePojo name");
+				EmployeePojo.setName(sc.next());
+				System.out.println("Please enther new price");
+				EmployeePojo.setPrice(sc.nextInt());
+				
+				System.out.println("\n"+oldname + " "+ price+" "+ " -> 4" + EmployeePojo.getName()+ " "+ EmployeePojo.getPrice()+ "\n");	
+			}
+		
+		}
+		
+		
+		
+	}
+	@Override
+	public void delete(ArrayList<EmployeePojo> EmployeePojos) {
+		
+		read(EmployeePojos);
+		
+		System.out.println("Please enter EmployeePojoid you wish to delete");
+		int uid=sc.nextInt();
+		
+		EmployeePojo btemp=null;
+		
+		for(EmployeePojo b: EmployeePojos) {
+			if(b.getID()==uid) {
+				btemp=b;
+			}
+			
+		}
+		if(btemp!=null) {
+			EmployeePojos.remove(btemp);
+		}
+	}
+	
+	@Override
+	public void find( ArrayList<EmployeePojo> EmployeePojos) {
+		System.out.println("Enter name of EmployeePojo to find");
+		String name=sc.next();
+		for(EmployeePojo b: EmployeePojos) {
+			if(b.getName().equals(name)) {
+				System.out.println("Name:"+name+ " id: "+ b.getID()+ " Price: " + b.getPrice() );
+			}
+			
+		}
+	}
+	@Override
+	public void printAll(ArrayList<EmployeePojo> Employees) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void sort(ArrayList<EmployeePojo> Employees) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

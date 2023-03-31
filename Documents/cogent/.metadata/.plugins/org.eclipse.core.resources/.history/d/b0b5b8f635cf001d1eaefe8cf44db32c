@@ -1,0 +1,14 @@
+package lambdaAssignment;
+
+
+public class Main {
+
+
+	public static void main(String [] args) {
+		
+		
+		String s="kslska";
+		MyInterface mi=(s)-> (System.out.println(s.length));
+		
+	}
+}

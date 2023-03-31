@@ -1,0 +1,15 @@
+package lambdaAssignment;
+
+import functional.MyInterface;
+
+public class Main {
+
+
+	public static void main(String [] args) {
+		
+		
+		String s="kslska";
+		MyInterface mi=(s)-> (s);
+		
+	}
+}

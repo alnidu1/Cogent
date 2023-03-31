@@ -1,0 +1,29 @@
+package Map;
+
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+
+public class HashMapDemo {
+
+	public static void main(String[] args) {
+		Map<String, Integer>map= new HashMap<>();
+		
+		map.put("a", 1);
+		
+		map.put("b", 2);
+		map.put("c", 3);
+		map.put("d", 4);
+		
+		Set<String> keyset=map.keySet();
+		Collection<Integer> values= map.values();
+		
+		System.out.println(keyset);
+		System.out.println(values);
+
+		for(String key:keyset) {
+			System.out.println(key+" " + map.get(key));
+		}
+	}
+}

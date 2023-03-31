@@ -1,0 +1,61 @@
+package employee;
+
+
+public class EmployeePojo implements Comparable{
+
+	private int Employeeno;
+	private String Name;
+	private String Address;
+	private String Email;
+	private float Salary;
+	public int getEmployeeno() {
+		return Employeeno;
+	}
+	public void setEmployeeno(int employeeno) {
+		Employeeno = employeeno;
+	}
+	public String getName() {
+		return Name;
+	}
+	public void setName(String name) {
+		Name = name;
+	}
+	public String getAddress() {
+		return Address;
+	}
+	public void setAddress(String address) {
+		Address = address;
+	}
+	public String getEmail() {
+		return Email;
+	}
+	public void setEmail(String email) {
+		Email = email;
+	}
+	public float getSalary() {
+		return Salary;
+	}
+	public void setSalary(float salary) {
+		Salary = salary;
+	}
+	public EmployeePojo(int employeeno, String name, String address, String email, float salary) {
+		super();
+		Employeeno = employeeno;
+		Name = name;
+		Address = address;
+		Email = email;
+		Salary = salary;
+	}
+	@Override
+	public int compareTo(Object o) {
+		EmployeePojo o1= this;
+		EmployeePojo o2=(EmployeePojo) o;
+		String s1=o1.Name;
+		String s2= o2.Name;
+		
+		return s1.compareTo(s2);
+	}
+	
+	
+	
+}

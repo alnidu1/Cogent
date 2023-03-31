@@ -1,0 +1,20 @@
+package student;
+
+import java.util.HashMap;
+
+public class Student {
+
+	private HashMap<String,String> empName= new HashMap<>();
+	
+	public void setNames() {
+		this.empName.put("5", "a");
+		this.empName.put("4", "b");
+		this.empName.put("3", "c");
+		this.empName.put("2", "d");
+		this.empName.put("1", "a");
+
+		
+		
+	}
+	
+}

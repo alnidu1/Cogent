@@ -1,0 +1,24 @@
+package Sorting;
+
+import java.util.Set;
+import java.util.TreeSet;
+
+public class Test {
+	
+	public static void main(String[] args) {
+		Set<Emp> set=new TreeSet<>();
+		
+		set.add(new Emp(100,"a"));
+		set.add(new Emp(200,"b"));
+
+		set.add(new Emp(300,"c"));
+
+		set.add(new Emp(400,"d"));
+
+		for(Emp em:set) {
+			System.out.println(em.id+" "+ em.name);
+		}
+	}
+
+}
+

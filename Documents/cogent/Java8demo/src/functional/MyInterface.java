@@ -1,0 +1,30 @@
+package functional;
+
+
+@FunctionalInterface
+public interface MyInterface {
+
+	public int sum(int a, int b);
+	/*
+	default void m2()
+	{
+		System.out.println("This is default");
+	}
+	
+	public static void m3() {
+		System.out.println("This is m2");
+
+	}
+	*/
+}
+/*
+class MyClass implements MyInterface{
+
+	@Override
+	public int sum(int a, int b) {
+		// TODO Auto-generated method stub
+		return a+b;
+	}
+	
+}
+*/

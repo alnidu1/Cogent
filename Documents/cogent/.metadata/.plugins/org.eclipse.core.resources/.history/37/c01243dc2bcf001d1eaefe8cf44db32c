@@ -1,0 +1,8 @@
+package demo;
+
+public interface MyInterface2{
+	
+}
+public class Main2 {
+
+}

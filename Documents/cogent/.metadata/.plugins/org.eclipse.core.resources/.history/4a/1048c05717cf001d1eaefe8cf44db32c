@@ -1,0 +1,31 @@
+package StudentComparable;
+
+public class Student implements Comparable {
+
+	private int rollNo;
+	private String name;
+	
+	public Student(int rollNo, String name)  {
+		super();
+		this.rollNo = rollNo;
+		this.name = name;
+	}
+	
+	@Override
+	public String toString()
+	{
+		return this.rollNo+" "+ this.name;
+		
+	}
+	
+	@Override
+	public int compareTo(Object o){
+		String s1=this.name;
+		String s2= (String) o;
+		
+		
+		return s1.compareTo(s2);
+		
+	}
+	
+}
