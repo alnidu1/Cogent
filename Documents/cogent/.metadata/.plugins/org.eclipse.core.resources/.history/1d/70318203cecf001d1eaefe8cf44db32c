@@ -24,17 +24,15 @@ public class Main {
 			}
 			catch(InputMismatchException e) {
 				System.out.println("Invalid Input datatype, please enter an Integer ");
-				sc.nextLine();
+				sc.next();
 			}
 			
 			switch(choice) {
 				case 1:
 					System.out.println("Enter Employee details");
-					EmployeePojo temp;
-					temp=empdao.create();
-					if(temp!=null) {
-						Employees.add(temp);
-					}
+					
+					Employees.add(empdao.create());
+					
 					break;
 				case 2:
 					empdao.printAll(Employees);

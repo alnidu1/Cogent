@@ -29,7 +29,6 @@ public class EmployeeDaoImpl implements EmployeeDao{
 		catch(InputMismatchException e) {
 			System.out.println("Invalid type, try again");
 			sc.nextLine();
-			return null;
 		}
 		
 		return emp;
@@ -37,11 +36,6 @@ public class EmployeeDaoImpl implements EmployeeDao{
 	}
 	@Override
 	public void printAll(ArrayList<EmployeePojo> EmployeePojos ) {
-		if(EmployeePojos.isEmpty()) {
-			System.out.println("List is empty");
-
-			return;
-		}
 		System.out.println("Employee Details\n");
 		for(EmployeePojo emp:EmployeePojos) {
 			if(emp==null) {

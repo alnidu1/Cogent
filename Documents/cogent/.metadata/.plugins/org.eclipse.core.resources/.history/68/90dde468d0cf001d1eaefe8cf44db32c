@@ -61,7 +61,7 @@ public class EmployeePojo implements Comparable{
 	
 	@Override
 	public String toString() {
-		return "ID: "+this.Employeeno+" Name: "+this.Name+" Address:"+ this.Address+ " Email:"+ this.Email+" Salary:"+this.Salary;
+		return this.Employeeno+"Name: "+this.Name+" Address:"+ this.Address+ " Email:"+ this.Email+" Salary:"+this.Salary;
 		
 	}
 	

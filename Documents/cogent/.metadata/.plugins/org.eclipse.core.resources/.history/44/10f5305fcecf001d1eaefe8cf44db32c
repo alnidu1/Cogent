@@ -2,7 +2,6 @@ package employee;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 
@@ -14,34 +13,24 @@ public class EmployeeDaoImpl implements EmployeeDao{
 	public EmployeePojo create() {
 		
 		EmployeePojo emp= new EmployeePojo();
-		try {
-			System.out.println("Please enter Employee Number");
-			emp.setEmployeeno(sc.nextInt());
-			System.out.println("Please enter Employee name");
-			emp.setName(sc.next());
-			System.out.println("Please enter Employee address");
-			emp.setAddress(sc.next());
-			System.out.println("Please enter Employee email");
-			emp.setEmail(sc.next());
-			System.out.println("Please enterEmployee Salary");
-			emp.setSalary(sc.nextFloat());
-		}
-		catch(InputMismatchException e) {
-			System.out.println("Invalid type, try again");
-			sc.nextLine();
-			return null;
-		}
+		
+		System.out.println("Please enter Employee Number");
+		emp.setEmployeeno(sc.nextInt());
+		System.out.println("Please enter Employee name");
+		emp.setName(sc.next());
+		System.out.println("Please enter Employee address");
+		emp.setAddress(sc.next());
+		System.out.println("Please enter Employee email");
+		emp.setEmail(sc.next());
+		System.out.println("Please enterEmployee Salary");
+		emp.setSalary(sc.nextFloat());
+		
 		
 		return emp;
 		
 	}
 	@Override
 	public void printAll(ArrayList<EmployeePojo> EmployeePojos ) {
-		if(EmployeePojos.isEmpty()) {
-			System.out.println("List is empty");
-
-			return;
-		}
 		System.out.println("Employee Details\n");
 		for(EmployeePojo emp:EmployeePojos) {
 			if(emp==null) {
@@ -57,20 +46,8 @@ public class EmployeeDaoImpl implements EmployeeDao{
 	}
 	@Override
 	public void update(ArrayList<EmployeePojo> EmployeePojos) {
-		if(EmployeePojos.isEmpty()) {
-			System.out.println("List is empty");
-
-			return;
-		}
 		System.out.println("Enter Employee ID you wish to update");
-		int uid=0;
-		try {
-			 uid= sc.nextInt();
-		}
-		catch(InputMismatchException e) {
-			System.out.println("Invalid Input datatype, please enter an Integer ");
-			sc.nextLine();
-		}
+		int uid= sc.nextInt();
 		
 		for(EmployeePojo emp: EmployeePojos) {
 			if(uid==emp.getEmployeeno()) {
@@ -96,22 +73,11 @@ public class EmployeeDaoImpl implements EmployeeDao{
 	}
 	@Override
 	public void delete(ArrayList<EmployeePojo> EmployeePojos) {
-		if(EmployeePojos.isEmpty()) {
-			
-			System.out.println("List is empty");
-			return;
-		}
+		
 		printAll(EmployeePojos);
 		
 		System.out.println("Please enter Employee Id you wish to delete");
-		int uid=0;
-		try {
-			 uid= sc.nextInt();
-		}
-		catch(InputMismatchException e) {
-			System.out.println("Invalid Input datatype, please enter an Integer ");
-			sc.nextLine();
-		}
+		int uid=sc.nextInt();
 		
 		EmployeePojo btemp=null;
 		
@@ -129,11 +95,6 @@ public class EmployeeDaoImpl implements EmployeeDao{
 	
 	@Override
 	public void find( ArrayList<EmployeePojo> EmployeePojos) {
-		if(EmployeePojos.isEmpty()) {
-			System.out.println("List is empty");
-
-			return;
-		}
 		System.out.println("Enter name of Employee to find");
 		String name=sc.next();
 		for(EmployeePojo b: EmployeePojos) {

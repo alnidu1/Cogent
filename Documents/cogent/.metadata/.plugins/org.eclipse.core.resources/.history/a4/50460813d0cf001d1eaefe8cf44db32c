@@ -30,11 +30,9 @@ public class Main {
 			switch(choice) {
 				case 1:
 					System.out.println("Enter Employee details");
-					EmployeePojo temp;
-					temp=empdao.create();
-					if(temp!=null) {
-						Employees.add(temp);
-					}
+					
+					Employees.add(empdao.create());
+					
 					break;
 				case 2:
 					empdao.printAll(Employees);

@@ -29,7 +29,6 @@ public class EmployeeDaoImpl implements EmployeeDao{
 		catch(InputMismatchException e) {
 			System.out.println("Invalid type, try again");
 			sc.nextLine();
-			return null;
 		}
 		
 		return emp;
