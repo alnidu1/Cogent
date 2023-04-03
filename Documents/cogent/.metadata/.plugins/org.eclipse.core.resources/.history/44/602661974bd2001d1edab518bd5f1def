@@ -1,0 +1,46 @@
+package dept;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class InsertDept {
+
+	public static void main(String[] args) {
+		 String url = "jdbc:mysql://localhost:3306/cogentdb";
+	        String username = "root";
+	        String password = "root1234";
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        try {
+	            Connection conn = DriverManager.getConnection(url, username, password);
+	            
+	            String sql = "INSERT INTO departments (id, name, salary, department) VALUES (?, ?, ?, ?)";
+	            PreparedStatement statement = conn.prepareStatement(sql);
+	            
+	            statement.setInt(1, 1); // Department ID
+	            statement.setString(2, "James"); // Department Name
+	            statement.setInt(3, 800003); // Manager ID
+	            statement.setString(4, "Grocery"); // Location
+	            
+	            int rowsInserted = statement.executeUpdate();
+	            if (rowsInserted > 0) {
+	                System.out.println("A new department was inserted successfully!");
+	            }
+	            
+	            // Close the connection and statement
+	            statement.close();
+	            conn.close();
+	        } catch (SQLException ex) {
+	            System.out.println("An error occurred: " + ex.getMessage());
+	            ex.printStackTrace();
+	        }
+	  }
+	
+}

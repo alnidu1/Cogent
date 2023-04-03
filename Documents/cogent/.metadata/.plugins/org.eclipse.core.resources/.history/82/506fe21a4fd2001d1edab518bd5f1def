@@ -1,0 +1,63 @@
+package dept;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Scanner;
+
+public class UpdateAll {
+
+	public static void main(String[] args) {
+	 	String url = "jdbc:mysql://localhost:3306/cogentdb";
+        String username = "root";
+        String password = "root1234";
+        
+        
+        
+        
+        
+        
+        
+        try {
+            Connection conn = DriverManager.getConnection(url, username, password);
+            
+            String selectSql = "SELECT * FROM departments";
+            Statement selectStatement = conn.createStatement();
+            
+            ResultSet resultSet = selectStatement.executeQuery(selectSql);
+            
+            Scanner scanner = new Scanner(System.in);
+            while (resultSet.next()) {
+                Double oldSalary = resultSet.getDouble("salary");
+                System.out.println("Current salary: " + oldSalary);
+                System.out.print("Enter new salary ");
+                Double newSalary = scanner.nextDouble();
+                
+                String updateSql = "UPDATE departments SET salary = ? WHERE salary= ?";
+                PreparedStatement updateStatement = conn.prepareStatement(updateSql);
+                updateStatement.setDouble(1, newSalary);
+                updateStatement.setDouble(2, oldSalary);
+                
+                int rowsUpdated = updateStatement.executeUpdate();
+                if (rowsUpdated > 0) {
+                    System.out.println("Department Salary updated!");
+                } else {
+                    System.out.println("Department not updated");
+                }
+                
+                updateStatement.close();
+            }
+            
+            resultSet.close();
+            selectStatement.close();
+            scanner.close();
+            conn.close();
+        } catch (SQLException ex) {
+            System.out.println("An error occurred: " + ex.getMessage());
+            ex.printStackTrace();
+        }
+  }
+}
