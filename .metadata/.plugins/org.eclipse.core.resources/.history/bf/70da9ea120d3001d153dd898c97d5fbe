@@ -1,0 +1,43 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    <bean id="hello" class="com.HelloWorld.Greeting"></bean>
+    <bean name="emp" class="com.HelloWorld.Employee" p:id="20" p:name="Andy"> </bean>
+    <bean name="person" class= "Person.Person">
+    	<property name="id" value="1"></property>
+    	<property name="name" value="Ash"></property>
+    	<property name="age" value="10"></property>
+    </bean>
+    
+    <bean name="hospital" class="Person.Hospital">
+    	<property name="name">
+    		<value>Global Hospital</value>
+    	</property>
+    	<property name="department">
+    	<list>
+    		<value>Front Office</value>
+    		<value> Back Office</value>
+    		<value> Middle Office</value>
+    	</list>
+    	</property>
+    	
+    
+    </bean>
+    
+    <bean name="pokedex" class="Person.Trainer" p:id="1996">
+    
+    	<property name="poke">
+    		<map>
+				<entry key= "0001" value="bulbasaur" ></entry> 
+				<entry key= "0004" value="squirtle"></entry> 
+				<entry key= "0007" value="charmander"></entry>
+				<entry key="0025" value="pikachu"></entry> 		
+    		</map>
+    	
+    	</property>
+    </bean>
+    </beans>
