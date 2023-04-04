@@ -19,6 +19,12 @@ public class Main {
 		  
 		  Trainer t= (Trainer) context.getBean("pokedex");
 		  
-		  System.out.println("id: "+ t.getId()+ " pokedex entry "+ t.getPoke());
+		  //System.out.println("id: "+ t.getId()+ " pokedex entry "+ t.getPoke());
+		  
+		  CarDealer cd= (CarDealer) context.getBean("cardealer");
+		  //System.out.println(cd.getName()+ " "+ cd.getModel());
+		  
+		  Student stud= (Student) context.getBean("student");
+		  System.out.println(stud);
 	}
 }
