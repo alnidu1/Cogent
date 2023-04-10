@@ -1,0 +1,14 @@
+package com.example.book.service;
+
+import java.awt.print.Book;
+import java.util.List;
+
+public interface BookService {
+
+	public List<Book> getAllBook();
+	public Book create(Book book);
+	public Book getBookById(long id);
+	public Book update(long id, Book book);
+	public void delete(long id);
+	
+}

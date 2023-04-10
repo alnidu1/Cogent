@@ -1,0 +1,49 @@
+package com.example.book.service;
+
+import java.awt.print.Book;
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.book.entity.BookEntity;
+import com.example.book.repository.BookRepository;
+
+@Service
+public class BookServiceImpl implements BookService{
+
+	@Autowired
+	private BookRepository repo;
+	
+	@Override
+	public List<BookEntity> getAllBook() {
+		return repo.findAll();
+	}
+
+	@Override
+	public BookEntity create(BookEntity book) {
+		// TODO Auto-generated method stub
+		return repo.save(book);
+	}
+
+	@Override
+	public Optional<BookEntity> getBookById(long id) {
+		// TODO Auto-generated method stub
+		return repo.findById(id);
+	}
+
+	@Override
+	public BookEntity update(long id, BookEntity book) {
+		// TODO Auto-generated method stub
+		book.setId(id);
+		return null;
+	}
+
+	@Override
+	public void delete(long id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,8 @@
+package cogent.infotech.com.controller;
+
+public class EmployeeController {
+
+	public String display() {
+		return "Employee name Shiva and salary is 100";
+	}
+}
