@@ -1,0 +1,8 @@
+package com.example.onetoonejpa2.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+@Repository
+public interface Employee extends JpaRepository<Employee,Long> {
+
+}

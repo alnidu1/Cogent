@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>JS Fundamental</title>
+            <script>
+                console.log("console js script");
+                document.write("document.write js script");
+            </script>
+        </head>
+
+        <body>
+            <br>
+            <br>
+            <script src="script.js"></script>
+            <br>
+            <button onclick="green()">green </button>
+            <button onclick="blue()">blue </button>
+            <button onclick="yellow()">yellow </button>
+
+            <button onclick="red()">red</button>
+            <a href="" onmouseover="white()">white</a>
+            <br>
+
+
+            <script> 
+            
+            function bluee(){
+                document.getElementById("name_txt").style.backgroundColor="blue";
+            }
+            function validate(){
+                if(document.getElementById("name1").value==="" || document.getElementById("pass1").value==="" ){
+                    alert("Enter all field");
+                }
+
+            }
+            </script>
+            <form action="">
+                <label > Name</label>
+                <input type="text" id="name_txt" onblur="bluee()">
+                <label > password</label>
+                <input type="password" id="password">
+            </form>
+
+            
+            <form action="loginfrm" onsubmit="return validate()">
+                <label>Name</label>
+                <input type="text", id="name1">
+                <label >Password</label>
+                <input type="password" id="pass1">
+                <button type="submit"> Submit</button>
+
+            </form>
+
+            
+        </body>
+    </html>

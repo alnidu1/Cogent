@@ -1,0 +1,86 @@
+<!Doctype html>
+<html>
+
+<head>
+    <title> My page</title>
+    <style> 
+    h2 { font-family: Georgia, serif; color: rgb(26, 0, 128); } 
+    form { text-align: center; margin: auto; width: 300px; padding: 20px; border: 1px solid #000; border-radius: 5px; }
+    
+    </style>
+</head>
+
+<body>
+    <h1><b>Andy Liu</b></h1>
+    <img src="flower.avif" style="position: absolute; top:0;right:0;" width="250" height="300">
+    <h2 style="background-color:rgb(0, 187, 255)">About</h2>
+        <p>Hi, I am Andy</p>
+    <h2 style="background-color:rgb(0, 187, 255)">Courses</h2>
+    <table border="1">
+        <tr>
+            <b>
+                <td>Course Number</td>
+                <td>Course Title</td>
+                <td>Semester</td>
+            </b>
+        </tr>
+        <tr>
+            <td colspan="3"><center><b>For Credit</b></center></td>
+        </tr>
+        <tr>
+            <td><a href="CS101.html">101</a></td>
+            <td>Intro to CS</td>
+            <td>FA00</td>
+        </tr>
+        <tr>
+            <td><a href="CS311.html">311</a></td>
+            <td>Algorithm</td>
+            <td>Sp01</td>
+        </tr>
+        <tr>
+            <td>140</td>
+            <td>Data Structure</td>
+            <td>FA01</td>
+        </tr>
+        <tr>
+            <td colspan="3"><center><b>Listener</b></center> </td>
+        </tr>
+        <tr>
+            <td>411</td>
+            <td>Linear Algebra</td>
+            <td>FA05</td>
+        </tr>
+    </table>
+    <h2 style="background-color:rgb(0, 187, 255)">Interests</h2>
+    <p>I am interested in foods, animes, games, and single/double players sport</p> 
+
+    <br>
+
+    <h2 style="background-color:rgb(0, 187, 255)">
+       Contact Me
+    </h2>
+    <form id="myForm" action="/submit" method="post">
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required>
+        <br>
+        <label for="message">Message:</label>
+        <textarea type="message" id="message" name="message"  rows= "4" cols="30" required></textarea>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    <div id="response"></div>
+    <script> document.getElementById('myForm').addEventListener('submit', function(event) { event.preventDefault(); 
+     var name = document.getElementById('name').value; 
+     var email = document.getElementById('email').value; 
+     var message = document.getElementById('message').value; 
+     var responseElement = document.getElementById('response'); 
+     responseElement.textContent = "Form submitted. Name: " + name + ", Email: " + email + ", Message: " + message; }); 
+     </script>
+
+</body>
+
+</html>

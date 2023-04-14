@@ -1,0 +1,32 @@
+package com.example.onetoonejpa2;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.example.onetoonejpa2.entity.Employee;
+import com.example.onetoonejpa2.entity.Passport;
+import com.example.onetoonejpa2.repository.EmployeeRepository;
+
+@SpringBootApplication
+public class OneToOneJpa2Application implements CommandLineRunner{
+
+	@Autowired
+	EmployeeRepository repo;
+	
+	public static void main(String[] args) {
+		SpringApplication.run(OneToOneJpa2Application.class, args);
+		
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+		Employee person =new Employee(1, "testp", "emailtest1", null);
+		Passport passport= new Passport(1, "passtest", "1/1/2000", person);
+		passport.setEmployee(person);
+		person.setPassport(passport);
+		
+		repo.save(person);
+	}
+}

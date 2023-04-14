@@ -1,0 +1,50 @@
+<!Doctype html>
+<html>
+
+<head>
+    <title> My mp4</title>
+    <style> 
+   
+    
+    </style>
+</head>
+
+<body>
+    <video id="Pokemon" src="Pokémon Theme Song (Music Video).mp4" controls ></video>
+
+    <button onclick="aplay()"> Play</button>
+
+    <button onclick="bigger()">Enlarge</button>
+    <button onclick="smaller()">Mini</button>
+    <button onclick="anormal()">   Normal</button>
+
+    <script>
+
+        var ctx= document.getElementById("Pokemon")
+
+        function aplay(){
+            if(ctx.paused){
+                ctx.play();
+            }
+            else{
+                ctx.pause()
+            }
+            
+        }
+
+
+        function bigger(){
+            ctx.style.width="800px";
+            ctx.style.heigth="600px";
+        }
+        function smaller(){
+            ctx.style.width="150px";
+            ctx.style.heigth="100px";
+        }
+        function anormal(){
+            ctx.style.width="450px";
+            ctx.style.heigth="300px";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+package cogent.infotech.com.service;
+
+import cogent.infotech.com.entity.User;
+
+public interface UserService {
+
+	public User createUser();
+	public User findUser(String name, String password);
+	
+}

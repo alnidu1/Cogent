@@ -1,0 +1,61 @@
+package cogent.infotech.com.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import cogent.infotech.com.entity.User;
+import cogent.infotech.com.repository.UserRepository;
+
+@Service
+public class UserServiceImpl implements UserService{
+
+	@Autowired
+	UserRepository uRepo;
+	
+	@Autowired
+	MovieRepository mRepo;
+	
+	@Override
+	public User createUser(User user) {
+		
+		return repo.save(user);
+	}
+
+	@Override
+	public User findUser(String name, String password) {
+		Optional<User> Ouser= repo.findByName(name);
+		if(Ouser.isPresent()) {
+			User user = Ouser.get();
+		    String pass = user.getPassword();
+		    if(pass.equals(password)) {
+		    	return user;
+		    }
+		}
+		return null;
+	}
+	
+	public List<Movie> getFavoriteMovies(Long userId) {
+        User user = userRepository.findById(userId)
+            .orElseThrow(() -> new EntityNotFoundException("User not found with id " + userId));
+        return user.getFavoriteMovies();
+    }
+	public void addFavoriteMovie(Long userId, Long movieId) {
+        User user = userRepository.findById(userId)
+            .orElseThrow(() -> new EntityNotFoundException("User not found with id " + userId));
+        Movie movie = movieRepository.findById(movieId)
+            .orElseThrow(() -> new EntityNotFoundException("Movie not found with id " + movieId));
+        user.getFavoriteMovies().add(movie);
+        userRepository.save(user);
+    }
+	public void removeFavoriteMovie(Long userId, Long movieId) {
+        User user = userRepository.findById(userId)
+            .orElseThrow(() -> new EntityNotFoundException("User not found with id " + userId));
+        Movie movie = movieRepository.findById(movieId)
+            .orElseThrow(() -> new EntityNotFoundException("Movie not found with id " + movieId));
+        user.getFavoriteMovies().remove(movie);
+        userRepository.save(user);
+    }
+}
