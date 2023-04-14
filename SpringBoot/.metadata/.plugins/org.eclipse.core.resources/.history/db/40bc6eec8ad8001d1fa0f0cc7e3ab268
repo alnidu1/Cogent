@@ -1,0 +1,5 @@
+package cogent.infotect.com.entity;
+
+public class User {
+
+}

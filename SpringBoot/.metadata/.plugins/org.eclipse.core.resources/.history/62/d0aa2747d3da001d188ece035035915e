@@ -1,0 +1,29 @@
+package cogent.infotech.com.entity;
+
+import java.util.List;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+public class Favorite {
+
+	
+	private long fid;
+	@OneToOne
+	Movie movie;
+	
+	@ManyToOne
+	@JoinColumn(name="uid")
+	User user;
+}

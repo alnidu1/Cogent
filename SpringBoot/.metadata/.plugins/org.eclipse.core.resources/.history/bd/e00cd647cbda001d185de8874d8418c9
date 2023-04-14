@@ -1,0 +1,47 @@
+package cogent.infotech.com.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import cogent.infotech.com.entity.Movie;
+import cogent.infotech.com.repository.MovieRepository;
+
+@Service
+public class MovieServiceImpl implements MovieService {
+
+	@Autowired
+	MovieRepository repo;
+	
+	@Override
+	public Movie create(Movie movie) {
+		return repo.save(movie);
+		
+	}
+
+	@Override
+	public List<Movie> read() {
+		return repo.findAll();
+	}
+
+	@Override
+	public Movie update(Long id, Movie movie) {
+		movie.setId(id);
+		return repo.save(movie);
+	}
+
+	@Override
+	public void delete(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Optional<Movie> readByName() {
+		// TODO Auto-generated method stub
+		return Optional.empty();
+	}
+
+}

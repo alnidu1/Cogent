@@ -1,0 +1,5 @@
+package com.exampleentities;
+
+public class Person {
+
+}

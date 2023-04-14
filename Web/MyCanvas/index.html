@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MyCanvas</title>
+        <style>
+            #circle{
+                height:100%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <a href="panda.html">pandas</a>
+        <canvas id="circle" width=" 300" heigth=" 1000" style="border: 10px solid yellow;" > </canvas>
+        <canvas id="pandas" width=" 300" heigth=" 1000" style="border: 10px solid yellow;" >
+
+
+        <script>
+
+            var c= document.getElementById("circle");
+            var ctx= c.getContext("2d");
+
+            ctx.beginPath();
+
+            ctx.arc(100, 100, 45, 0, 2* Math.PI);
+            ctx.fillStyle= "red";
+            ctx.fill();
+            ctx.strokeStyle="blue"
+            ctx.lineWidth=3;
+            ctx.stroke();
+            ctx.closePath();
+
+           var c1=document.getElementById("pandas");
+           c1.height=500;
+           var ctx1=c1.getContext("2d");
+           ctx1.beginPath();
+           ctx1.arc(100, 100, 45, 0, 2* Math.PI);
+           ctx1.strokeStyle="black"
+           ctx1.stroke();
+           ctx1.closePath();
+           ctx1.beginPath();
+           ctx1.arc(60, 55, 15, 0, 2* Math.PI);
+           ctx1.strokeStyle="black"
+           ctx1.stroke();
+           ctx1.fillStyle= "black";
+           ctx1.fill();
+
+           ctx1.beginPath();
+           ctx1.arc(140, 55, 15, 0, 2* Math.PI);
+           ctx1.strokeStyle="black"
+           ctx1.stroke();
+           ctx1.fillStyle= "black";
+           ctx1.fill();
+
+           ctx1.beginPath();
+           ctx1.arc(100, 220, 75, 0, 2* Math.PI);
+           ctx1.strokeStyle="black"
+           ctx1.stroke();
+           
+
+           ctx1.beginPath();
+           ctx1.arc(50, 300, 20, 0, 2* Math.PI);
+           ctx1.strokeStyle="black"
+           ctx1.stroke();
+           ctx1.fillStyle= "black";
+           ctx1.fill();
+
+           ctx1.beginPath();
+           ctx1.arc(150, 300, 20, 0, 2* Math.PI);
+           ctx1.strokeStyle="black"
+           ctx1.stroke();
+           ctx1.fillStyle= "black";
+           ctx1.fill();
+
+           ctx1.beginPath();
+           ctx1.arc(100, 100, 7, 0, 2* Math.PI);
+           ctx1.strokeStyle="black"
+           ctx1.fillStyle= "black";
+            ctx1.fill();
+           ctx1.stroke();
+
+           ctx1.beginPath();
+           ctx1.arc(75, 80, 5, 0, 2* Math.PI);
+           ctx1.strokeStyle="black"
+           ctx1.fillStyle= "black";
+           ctx1.fill();
+           ctx1.stroke();
+          
+           ctx1.beginPath();
+           ctx1.arc(125, 80, 5, 0, 2* Math.PI);
+           ctx1.strokeStyle="black"
+           ctx1.fillStyle= "black";
+           ctx1.fill();
+           ctx1.stroke();
+
+
+           ctx1.beginPath();
+           ctx1.arc(10, 200, 20, 0, 2* Math.PI);
+           ctx1.strokeStyle="black"
+           ctx1.stroke();
+           ctx1.fillStyle= "black";
+           ctx1.fill();
+
+           ctx1.beginPath();
+           ctx1.arc(190, 200, 20, 0, 2* Math.PI);
+           ctx1.strokeStyle="black"
+           ctx1.stroke();
+           ctx1.fillStyle= "black";
+           ctx1.fill();
+
+        </script>
+    </body>
+    
+
+</html>

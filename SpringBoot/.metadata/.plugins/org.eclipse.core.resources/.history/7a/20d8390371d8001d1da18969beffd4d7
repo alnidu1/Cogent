@@ -1,0 +1,60 @@
+package com.example.entities;
+
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
+
+public class Passport {
+
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private long id;
+	
+	private String expiration;
+
+	private String address;
+	private Person person;
+	
+	//@OneToOne(fetch=FetchType.LAZY, cascade=CascadeType.ALL)
+	public Passport(long id, String expiration, String address, Person person) {
+		super();
+		this.id = id;
+		this.expiration = expiration;
+		this.address = address;
+		this.person = person;
+	}
+	public Passport() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
+	public String getExpiration() {
+		return expiration;
+	}
+	public void setExpiration(String expiration) {
+		this.expiration = expiration;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public Person getPerson() {
+		return person;
+	}
+	public void setPerson(Person person) {
+		this.person = person;
+	}
+	
+	
+}

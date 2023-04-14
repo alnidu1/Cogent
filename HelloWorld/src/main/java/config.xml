@@ -40,4 +40,26 @@
     	
     	</property>
     </bean>
+    
+    <bean name="cardealer" class= "Person.CarDealer">
+    	<property name="name" value="NY Dealer"></property>
+    	
+    	<property name="model">
+    		<list>
+    		
+    			<value> Honda</value>
+    			<value>BMW</value>
+       			<value> Honda</value>
+    			
+    			
+    		</list>
+    		
+    		
+    	</property>
+    </bean>
+    
+    <bean name="scores" class="Person.Scores" p:math="80" p:physic="90" p:chemistry="99"></bean>
+    <bean name="student" class="Person.Student" p:scores-ref= "scores">
+    	
+    </bean>
     </beans>
