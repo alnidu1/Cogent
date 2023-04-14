@@ -1,0 +1,17 @@
+package cogent.infotech.com.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import cogent.infotech.com.entity.Movie;
+
+public interface MovieService {
+	
+	public Movie create(Movie m);
+	public List<Movie> read();
+	public Optional<Movie> readByName(String name);
+	public Optional<Movie> readById(Long id);
+	public Movie update(Long id, Movie movie);
+	public void delete(Long id);
+	
+}

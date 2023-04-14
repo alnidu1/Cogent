@@ -1,0 +1,75 @@
+package cogent.infotech.com.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import cogent.infotech.com.entity.Movie;
+import cogent.infotech.com.entity.User;
+import cogent.infotech.com.repository.MovieRepository;
+import cogent.infotech.com.repository.UserRepository;
+import jakarta.persistence.EntityNotFoundException;
+
+@Service
+public class UserServiceImpl implements UserService{
+
+	@Autowired
+	UserRepository uRepo;
+	
+	@Autowired
+	MovieRepository mRepo;
+	
+	@Override
+	public User createUser(User user) {
+		
+		return uRepo.save(user);
+	}
+
+	@Override
+	public User findUser(String name, String password) {
+		Optional<User> Ouser= uRepo.findByName(name);
+		if(Ouser.isPresent()) {
+			User user = Ouser.get();
+		    String pass = user.getPassword();
+		    if(pass.equals(password)) {
+		    	return user;
+		    }
+		}
+		return null;
+	}
+	
+	@Override
+	public List<Movie> getFavoriteMovies(Long userId) {
+        User user = uRepo.findById(userId)
+            .orElseThrow(() -> new EntityNotFoundException("User id: " + userId + " not found!"));
+        return user.getFavoriteMovies();
+    }
+	@Override
+	public void addFavoriteMovie(Long userId, Long movieId) {
+        User user = uRepo.findById(userId)
+            .orElseThrow(() -> new EntityNotFoundException("User id: " + userId + " not found!"));
+        Movie movie = mRepo.findById(movieId)
+            .orElseThrow(() -> new EntityNotFoundException("Movie id: " + movieId + " not found!"));
+        user.getFavoriteMovies().add(movie);
+        uRepo.save(user);
+    }
+	@Override
+	public void removeFavoriteMovie(Long userId, Long movieId) {
+        User user = uRepo.findById(userId)
+            .orElseThrow(() -> new EntityNotFoundException("User id: " + userId + " not found!"));
+        Movie movie = mRepo.findById(movieId)
+            .orElseThrow(() -> new EntityNotFoundException("Movie id: " + movieId + " not found!"));
+        user.getFavoriteMovies().remove(movie);
+        uRepo.save(user);
+    }
+	
+	public Optional<User> findUserId(Long id) {
+		
+		return uRepo.findById(id);
+		
+	}
+	
+	
+}
