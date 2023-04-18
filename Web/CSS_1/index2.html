@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Css using list</title>
+        <style>
+            h1 em{
+                color: green;
+            }
+            ul.menu{
+                padding: 0;
+                list-style: none;
+            }
+            ul.menu li{
+                display: inline;
+            }
+            ul.menu li a{
+                margin: 10px;
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            this is a <em> heading</em>
+        </h1>
+
+        <ul class=" menu">
+            <li >
+                <a href="">stuff</a>
+            </li>
+            <li> <a href=""> stuff2</a></li>
+            <li>
+                <a href="">Service</a>
+                <ol>
+                    <li><a href="">Design</a></li>
+                    <li><a href="">Development</a></li>
+
+                </ol>
+            </li>
+
+        </ul>
+    </body>
+</html>
