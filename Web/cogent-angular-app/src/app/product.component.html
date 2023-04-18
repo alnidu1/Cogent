@@ -1,0 +1,16 @@
+<!DOCTYPE html >
+<html>
+<head>
+    <title>Angular Framework</title>
+</head>
+<body>
+    ProductNo:{{productNo}}<br>
+    Product name: {{productName}}<br>
+    Product price:{{productProce}}<br>
+    <img [src]='ImageUrl' ><br>
+    <button (click)="message()">Product</button><br>
+
+    Enter Name:<input type="text" [(ngModel)]="name"/><br>
+    {{name}}
+</body>
+</html>

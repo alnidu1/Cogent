@@ -1,0 +1,55 @@
+<!DOCTYPE html >
+<html>
+<head>
+    <title>Angular Framework</title>
+    <style>
+        body{
+            display: inline-block;
+            text-align: justify;
+            width: 100%;
+        }
+        li{
+            font-size: 20px;
+         
+        }
+        img{
+            width:200px;
+            height: 200px;
+        }
+    </style>
+  
+</head>
+<body>
+    
+    <table id="MyList">
+        
+        <li *ngFor="let ident of id; let i= index " >
+            Item No:{{id[i]}}
+            Item name: {{name[i]}}
+            Item price:{{price[i]}}
+            <img [src]='image[i]' >
+            <button  (click)="toggle()"> update</button>
+
+            <form *ngIf="showForm"  #form="ngForm" >
+                
+                New ID:<input type="text" [(ngModel)]="id[i]" name="id"/><br>
+                New Name:<input type="text" [(ngModel)]="name[i]" name="name"/><br>
+                New Price:<input type="text" [(ngModel)]="price[i]" name="price"/><br>
+                New Image:<input type="text" [(ngModel)]="image[i]" name="image"/><br>
+
+                <button type="submit" (click)="toggle()"> Submit</button>
+            </form>
+
+            <button  (click)="display(i)"> delete</button>
+
+
+        </li>
+
+    </table>
+    <script>
+    
+        
+        
+    </script>
+</body>
+</html>
