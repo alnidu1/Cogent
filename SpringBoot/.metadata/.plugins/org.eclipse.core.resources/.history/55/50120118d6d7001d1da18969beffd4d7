@@ -1,8 +1,0 @@
-package com.example.book.entity;
-
-public class BookEntity {
-
-	private int id;
-	private String name;
-	private double price;
-}

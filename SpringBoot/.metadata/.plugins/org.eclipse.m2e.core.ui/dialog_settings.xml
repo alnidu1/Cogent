@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="/Users/alnidu/Documents/cogentSpring/SpringProjects/book-backend"/>
 			<item value="/Users/alnidu/Downloads/Admin-User-Crud 2"/>
 			<item value="/Users/alnidu/Downloads/spring-boot-security-application"/>
 			<item value="/Users/alnidu/Downloads/spring-boot-security 2"/>
@@ -16,7 +17,6 @@
 			<item value="/Users/alnidu/Downloads/employeeh2web"/>
 			<item value="/Users/alnidu/Downloads/restwebh2"/>
 			<item value="/Users/alnidu/Downloads/restweb"/>
-			<item value="/Users/alnidu/Downloads/HelloWorld"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
