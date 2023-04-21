@@ -1,5 +1,0 @@
-package cogent.infotect.com.service;
-
-public class CustomUserDetailsService {
-
-}

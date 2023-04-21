@@ -1,0 +1,20 @@
+
+
+<div class="card">
+  <h2>Login Form</h2>
+<form novalidate #loginform='ngForm' (ngSubmit)="onSubmit(loginform)">
+<div>
+    <label for="ID"> ID</label>
+    <input type="number" [(ngModel)]=" model.id" name="id" required>
+</div>
+<div>
+  <label for="password">Password</label>
+    <input type="password" [(ngModel)]="model.password" name="password">
+</div>
+  <input type="checkbox" [(ngModel)]="model.rememberPass" name="rpass" required> 
+<div>
+
+</div>
+<button [disabled]=" loginform.invalid"  type="submit">Submit</button>
+</form>
+</div>

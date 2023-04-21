@@ -1,7 +1,10 @@
 export class CarEntity{
 
-    constructor(public brand:string, public color:string)
+    brand:string;
+    color:string;
+    constructor(public _brand:string, public _color:string)
     {
-    
+        this.brand=_brand;
+        this.color=_color;
     }
 }

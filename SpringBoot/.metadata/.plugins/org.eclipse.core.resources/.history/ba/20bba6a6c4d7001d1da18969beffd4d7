@@ -1,9 +1,0 @@
-package com.example.restwebh2.respository;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-
-import com.example.restwebh2.entity.Employee;
-
-public interface EmployeeRepo  extends JpaRepository<Employee, Long>{
-
-}

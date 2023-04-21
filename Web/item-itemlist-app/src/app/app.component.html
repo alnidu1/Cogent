@@ -1,1 +1,107 @@
+<!--
 <itemlist></itemlist>
+
+<h1 >Products</h1>
+<table>
+    <thead>
+        <th> ID </th>
+        <th>Title</th>
+        <th>Price</th>
+        <th>Stock</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products" >
+                <td *ngIf="product.price >1">{{product.id}}</td>
+                <td *ngIf="product.price >1">{{product.title | titlecase}}</td>
+
+                <td *ngIf="product.price >1">{{product.price |currency}}</td>
+                <td *ngIf="product.price >1"> {{product.stock}}</td>
+
+            
+        </tr>
+    </tbody>
+   
+    
+</table>
+<div *ngIf="showMessage">
+    Cogent Infotech DHM65 Batch
+</div>
+<div>{{companyName | uppercase}} </div>
+<div>{{productName| uppercase}}<br>
+    {{productPrice|currency}}
+</div>
+
+
+<br>
+<br>
+
+<div class="card">
+    <div class="card-header">
+        ngSwitch
+    </div>
+
+    <div class="card-body">
+        Input String : <input type="number" [(ngModel)]="num">
+
+        <div [ngSwitch]="num">
+            <div *ngSwitchCase="1">One </div>
+            <div *ngSwitchCase="2">two </div>
+            <div *ngSwitchCase="3">three </div>
+            <div *ngSwitchCase="4">four </div>
+            <div *ngSwitchCase="5">five </div>
+            <div *ngSwitchDefault>Default</div>
+
+        </div>
+
+    </div>
+
+</div>
+<br><br><br><br>
+<div class="card">
+    <div class="card-header">
+        Day of Week
+    </div>
+    <div class="card-body">
+        <select [(ngModel)]="s_one">
+            <option *ngFor="let item of items" [value]="item.val"> {{item.val}}</option>
+        </select>
+
+        <div [ngSwitch]="s_one">
+            <div *ngSwitchCase="1"> Monday</div>
+            <div *ngSwitchCase="2">Tuesday</div>
+            <div *ngSwitchCase="3"> Wednesday</div>
+            <div *ngSwitchCase="4">thursday</div>
+            <div *ngSwitchCase="5"> friday</div>
+            <div *ngSwitchCase="6"> saturaday</div>
+            <div *ngSwitchCase="7"> sunday</div>
+            <div *ngSwitchDefault> Not a valid day</div>
+
+
+        </div>
+
+    </div>
+</div>
+
+<br><br><br>
+
+{{data}}
+-->
+<table>
+
+    <thead>
+        <th> UserID </th>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Body</th>
+    </thead>
+    <tr *ngFor="let post of posts" >
+    
+        <td>{{post.userId}} </td>
+        <td>{{post.id}} </td>
+        <td>{{post.title}} </td>
+        <td>{{post.body}} </td>
+        <br>
+    
+    
+    </tr>   
+</table>
