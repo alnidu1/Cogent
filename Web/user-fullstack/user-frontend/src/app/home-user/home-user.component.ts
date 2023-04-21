@@ -45,6 +45,7 @@ export class HomeUserComponent implements OnInit{
   }
 
   editUser(user:User){
+    console.log(user.id +""+ user.name);
     this.userService.updatedUser(user).subscribe(()=>
       {
         this.loadUser();

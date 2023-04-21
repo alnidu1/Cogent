@@ -46,7 +46,12 @@ button {
 }
 
 #deleteb{
-    color:red;
+    background-color: red;
+    color:white;
+}
+#resetb{
+    background-color: red;
+    color:white;
 }
 
 button:hover {
