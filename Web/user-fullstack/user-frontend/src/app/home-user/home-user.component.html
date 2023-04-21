@@ -19,6 +19,7 @@
           <input type="number" [(ngModel)]="model.salary" name="salary">
       </div>
       <button [disabled]=" loginform.invalid"  type="submit">Submit</button>
+      <button id="resetb" type="reset">Reset </button>
       </form>
     </div>
 
@@ -40,14 +41,22 @@
                 <td> 
                     <button  (click)="toggle()"> update</button>
 
-            <form *ngIf="showForm"  #form="ngForm" >
-                
-                New Name:<input type="text" [(ngModel)]="user.name" name="name"/><br>
-                New Age:<input type="number" [(ngModel)]="user.age" name="age"/><br>
-                New Salary:<input type="number" [(ngModel)]="user.salary" name="salary"/><br>
-
-                <button type="submit" (click)="toggle()"> Submit</button>
-            </form>
+                    <form  *ngIf="showForm" novalidate #loginform='ngForm' (ngSubmit)="editUser(loginform.value) ">
+                        <input type="hidden" name="id" [(ngModel)]="user.id">
+                        <div>
+                            <label for="Name"> Name</label>
+                            <input type="text" [(ngModel)]=" user.name" name="name" required>
+                        </div>
+                        <div>
+                          <label for="Age">Age</label>
+                            <input type="number" [(ngModel)]="user.age" name="age">
+                        </div>
+                        <div>
+                          <label for="Salary">Salary</label>
+                            <input type="number" [(ngModel)]="user.salary" name="salary">
+                        </div>
+                        <button   type="submit">Submit</button>
+                        </form>
                     <button id="deleteb" (click)="deleteUser(user)">Delete</button>
                 </td>
 
